@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Http;
@@ -16,6 +10,8 @@ namespace MRZmLearnAPOD
 {
     public partial class General : Form
     {
+        #region gobal
+
         // The objective of the NASA API portal is to make NASA data, including imagery, eminently accessible to application developers.
         const string EndpointURL = "https://api.nasa.gov/planetary/apod";
 
@@ -37,6 +33,7 @@ namespace MRZmLearnAPOD
         // A char used to separate the name from the value in the init file.
         const char SettingDivider = ':';
 
+        #endregion global
         public General()
         {
             InitializeComponent();
