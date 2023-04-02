@@ -33,9 +33,9 @@ namespace MRZmLearnAPOD
             this.MonthCalendar = new System.Windows.Forms.MonthCalendar();
             this.LaunchButton = new System.Windows.Forms.Button();
             this.Settings = new System.Windows.Forms.GroupBox();
-            this.ShowTodaysImageCheckBox = new System.Windows.Forms.CheckBox();
-            this.LimitRangeCheckBox = new System.Windows.Forms.CheckBox();
             this.label = new System.Windows.Forms.Label();
+            this.LimitRangeCheckBox = new System.Windows.Forms.CheckBox();
+            this.ShowTodaysImageCheckBox = new System.Windows.Forms.CheckBox();
             this.ImagesTodayTextBox = new System.Windows.Forms.TextBox();
             this.ImageCopyrightTextBox = new System.Windows.Forms.TextBox();
             this.labelCopyright = new System.Windows.Forms.Label();
@@ -51,6 +51,7 @@ namespace MRZmLearnAPOD
             this.MonthCalendar.Location = new System.Drawing.Point(0, 0);
             this.MonthCalendar.Name = "MonthCalendar";
             this.MonthCalendar.TabIndex = 0;
+            this.MonthCalendar.DateSelected += new System.Windows.Forms.DateRangeEventHandler(this.MonthCalendar_DateSelected);
             // 
             // LaunchButton
             // 
@@ -60,6 +61,7 @@ namespace MRZmLearnAPOD
             this.LaunchButton.TabIndex = 1;
             this.LaunchButton.Text = "Launch";
             this.LaunchButton.UseVisualStyleBackColor = true;
+            this.LaunchButton.Click += new System.EventHandler(this.LaunchButton_Click);
             // 
             // Settings
             // 
@@ -73,15 +75,14 @@ namespace MRZmLearnAPOD
             this.Settings.TabStop = false;
             this.Settings.Text = "Settings";
             // 
-            // ShowTodaysImageCheckBox
+            // label
             // 
-            this.ShowTodaysImageCheckBox.AutoSize = true;
-            this.ShowTodaysImageCheckBox.Location = new System.Drawing.Point(3, 16);
-            this.ShowTodaysImageCheckBox.Name = "ShowTodaysImageCheckBox";
-            this.ShowTodaysImageCheckBox.Size = new System.Drawing.Size(118, 17);
-            this.ShowTodaysImageCheckBox.TabIndex = 0;
-            this.ShowTodaysImageCheckBox.Text = "Show todays image";
-            this.ShowTodaysImageCheckBox.UseVisualStyleBackColor = true;
+            this.label.AutoSize = true;
+            this.label.Location = new System.Drawing.Point(6, 59);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(134, 13);
+            this.label.TabIndex = 2;
+            this.label.Text = "Images downloaded today:";
             // 
             // LimitRangeCheckBox
             // 
@@ -92,15 +93,17 @@ namespace MRZmLearnAPOD
             this.LimitRangeCheckBox.TabIndex = 1;
             this.LimitRangeCheckBox.Text = "Limit range";
             this.LimitRangeCheckBox.UseVisualStyleBackColor = true;
+            this.LimitRangeCheckBox.CheckedChanged += new System.EventHandler(this.LimitRangeCheckBox_CheckedChanged);
             // 
-            // label
+            // ShowTodaysImageCheckBox
             // 
-            this.label.AutoSize = true;
-            this.label.Location = new System.Drawing.Point(6, 59);
-            this.label.Name = "label";
-            this.label.Size = new System.Drawing.Size(134, 13);
-            this.label.TabIndex = 2;
-            this.label.Text = "Images downloaded today:";
+            this.ShowTodaysImageCheckBox.AutoSize = true;
+            this.ShowTodaysImageCheckBox.Location = new System.Drawing.Point(3, 16);
+            this.ShowTodaysImageCheckBox.Name = "ShowTodaysImageCheckBox";
+            this.ShowTodaysImageCheckBox.Size = new System.Drawing.Size(118, 17);
+            this.ShowTodaysImageCheckBox.TabIndex = 0;
+            this.ShowTodaysImageCheckBox.Text = "Show todays image";
+            this.ShowTodaysImageCheckBox.UseVisualStyleBackColor = true;
             // 
             // ImagesTodayTextBox
             // 
@@ -179,6 +182,7 @@ namespace MRZmLearnAPOD
             this.MinimumSize = new System.Drawing.Size(980, 680);
             this.Name = "General";
             this.Text = "MRZ APOD";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.General_FormClosed);
             this.Settings.ResumeLayout(false);
             this.Settings.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ImagePictureBox)).EndInit();
