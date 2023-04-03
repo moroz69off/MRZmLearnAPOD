@@ -13,7 +13,7 @@
         <TextBox x:Name="LatTB" HorizontalAlignment="Left" Margin="45,170,0,0" Text="Lat" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" TextChanged="LatTB_TextChanged"/>
         <TextBox x:Name="LonTB" HorizontalAlignment="Left" Margin="45,225,0,0" Text="Lon" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" TextChanged="LonTB_TextChanged"/>
         <Image x:Name="ImagePicture" HorizontalAlignment="Left" Height="512
-               " Margin="270,40,0,0" VerticalAlignment="Top" Width="512" Source="/Assets/Square150x150Logo.scale-200.png"/>
+               " Margin="270,40,0,0" VerticalAlignment="Top" Width="512"/>
         <CheckBox x:Name="IsSaveCheck" Content="Is save" Margin="45,280,0,0" VerticalAlignment="Top" Width="165"/>
     </Grid>
 </Page>
