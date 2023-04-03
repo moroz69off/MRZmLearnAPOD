@@ -9,15 +9,23 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid x:Name="MainFormUWP">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="71*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="22*"/>
+        </Grid.ColumnDefinitions>
         <CalendarDatePicker x:Name="MonthCalendar" Margin="40,35,0,0" VerticalAlignment="Top" Height="45" Width="360" PlaceholderText="Выбор даты"/>
         <Button x:Name="LaunchButton" Content="Перейти к дате запуска проекта" Margin="40,105,0,0" VerticalAlignment="Top" Height="50" Width="360"/>
-        <Border BorderThickness="1" BorderBrush="Black" Margin="40,195,1520,465">
+        <Border BorderThickness="1" BorderBrush="Black" Margin="40,195,1020,465">
 
         </Border>
         <CheckBox x:Name="LimitRangeCheckBox" Content="Ограничить диапазон текущим годом" Margin="60,283,0,0" VerticalAlignment="Top" Width="320" Height="47"/>
         <TextBlock HorizontalAlignment="Left" Margin="60,326,0,0" Text="Координаты" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="318"/>
         <TextBox x:Name="LatitudeTextBox" HorizontalAlignment="Left" Margin="65,355,0,0" Text="Latitude" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="35"/>
         <TextBox x:Name="LongitudeTextBox" HorizontalAlignment="Left" Margin="230,355,0,0" Text="Longitude" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="35"/>
+        <Border x:Name="ImageBorder" BorderThickness="1" BorderBrush="Black" Margin="455,50,415,55" Grid.ColumnSpan="3">
+            <Image x:Name="ImagePictures" Width="880" Height="880"/>
+        </Border>
 
     </Grid>
 </Page>
