@@ -13,18 +13,29 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
-// Документацию по шаблону элемента "Пустая страница" см. по адресу https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x419
-
 namespace MRZmLearnAPOD_UWP
 {
-    /// <summary>
-    /// Пустая страница, которую можно использовать саму по себе или для перехода внутри фрейма.
-    /// </summary>
     public sealed partial class MainPage : Page
     {
+        DateTime launchDate = new DateTime(2014, 02, 01);
+
+        const string EndpointURL = "https://api.nasa.gov/planetary/earth/imagery";
+        const string GIBS = "Global Imagery Browse Service";
+        const string exampleQuery = "https://api.nasa.gov/planetary/earth/imagery?lon=100.75&lat=1.5&date=2014-02-01&api_key=DEMO_KEY";
+
+        float dim = 0.025F, lat = 47.2070208F, lon = 39.6867104F;
+
+        private void LaunchButton_Click(object sender, RoutedEventArgs e)
+        {
+            MonthCalendar.MinDate = launchDate;
+        }
+
         public MainPage()
         {
             this.InitializeComponent();
+
+            MonthCalendar.MinDate = launchDate;
+            MonthCalendar.MaxDate = DateTime.Today;
         }
     }
 }

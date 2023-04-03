@@ -6,25 +6,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
-    <Grid x:Name="MainFormUWP">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="0*"/>
-        </Grid.ColumnDefinitions>
-        <CalendarDatePicker x:Name="MonthCalendar" Margin="40,35,0,0" VerticalAlignment="Top" Height="45" Width="360" PlaceholderText="Выбор даты"/>
-        <Button x:Name="LaunchButton" Content="Перейти к дате запуска проекта" Margin="40,105,0,0" VerticalAlignment="Top" Height="45" Width="360"/>
-        <CheckBox x:Name="ShowTodayCheckBox" Content="Показывать картинку при запуске" Margin="60,200,0,0" VerticalAlignment="Top" Width="320" Height="45"/>
-        <CheckBox x:Name="LimitRangeCheckBox" Content="Сохранять текущие координаты" Margin="60,283,0,0" VerticalAlignment="Top" Width="320" Height="45"/>
-        <TextBlock HorizontalAlignment="Left" Margin="60,326,0,0" Text="Координаты" TextWrapping="Wrap" VerticalAlignment="Top" Height="30" Width="318"/>
-        <TextBox x:Name="LatitudeTextBox" HorizontalAlignment="Left" Margin="65,355,0,0" Text="Latitude" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="35"/>
-        <TextBox x:Name="LongitudeTextBox" HorizontalAlignment="Left" Margin="230,355,0,0" Text="Longitude" TextWrapping="Wrap" VerticalAlignment="Top" Width="145" Height="35"/>
-        <Border BorderThickness="1" BorderBrush="Black" Margin="40,190,1520,660"/>
-        <Border BorderThickness="1" BorderBrush="Black" Margin="450,0,0,0">
-            <Image x:Name="ImagePicture" Margin="222,27,222,27" Width="1024" Height="1024" Source="/Assets/SplashScreen.scale-200.png"/>
-        </Border>
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1080" Height="760">
+    <Grid>
+        <CalendarDatePicker x:Name="MonthCalendar" Margin="45,35,0,0" VerticalAlignment="Top" Width="165" HorizontalAlignment="Left"/>
+        <Button x:Name="LaunchButton" Content="Launch" Margin="45,95,0,0" VerticalAlignment="Top" Width="165" Click="LaunchButton_Click"/>
+        <TextBox x:Name="LanTB" HorizontalAlignment="Left" Margin="45,170,0,0" Text="Lan" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+        <TextBox x:Name="LonTB" HorizontalAlignment="Left" Margin="45,225,0,0" Text="Lon" TextWrapping="Wrap" VerticalAlignment="Top" Width="165"/>
+        <Image x:Name="ImagePicture" HorizontalAlignment="Left" Height="512
+               " Margin="270,40,0,0" VerticalAlignment="Top" Width="512" Source="/Assets/Square150x150Logo.scale-200.png"/>
+        <CheckBox x:Name="IsSaveCheck" Content="Is save" Margin="45,280,0,0" VerticalAlignment="Top" Width="165"/>
     </Grid>
 </Page>
