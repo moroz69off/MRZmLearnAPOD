@@ -27,20 +27,20 @@ namespace MRZmLearnAPOD_UWP
 
         private void LatTB_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            lat = float.Parse(LatTB.Text);
         }
 
         private void LonTB_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            lon = float.Parse(LonTB.Text);
         }
 
         private void LaunchButton_Click(object sender, RoutedEventArgs e)
         {
             MonthCalendar.MinDate = launchDate;
 
-            LatTB.Text = lat.ToString();
-            LonTB.Text = lon.ToString();
+            //LatTB.Text = lat.ToString();
+            //LonTB.Text = lon.ToString();
         }
 
         public MainPage()
