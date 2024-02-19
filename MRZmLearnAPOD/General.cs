@@ -13,10 +13,11 @@ namespace MRZmLearnAPOD
         #region gobal
 
         // The objective of the NASA API portal is to make NASA data, including imagery, eminently accessible to application developers.
+        // Цель портала API НАСА — сделать данные НАСА, включая изображения, максимально доступными для разработчиков приложений.
         const string EndpointURL = "https://api.nasa.gov/planetary/apod";
 
         // June 16, 1995: the APOD launch date.
-        DateTime launchDate = new DateTime(1995, 6, 16);
+        DateTime launchDate = new DateTime(2020, 6, 16);
 
         // A count of images downloaded today.
         int imageCountToday;
